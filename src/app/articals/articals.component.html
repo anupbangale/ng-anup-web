@@ -1,0 +1,17 @@
+<div class="ui-g-12 ui-lg-12 ui-md-12 menu-title">
+  <h1>Articals</h1>
+</div>
+<div class="ui-g-12 ui-lg-12 ui-md-12">
+  <div *ngFor="let artical of articalsList">
+    <p-card header="{{artical.title}}" subheader="Written By- {{artical.writer}}" [style]="{width: '100%'}"
+      class="ui-g-12 ui-md-6 ui-lg-4" styleClass="ui-card-shadow">
+      <p-header>
+        <img src="Card" src="assets/images/usercard.png">
+      </p-header>
+      <div>{{artical.content}} </div>
+      <p-footer>
+        <button  pButton type="button" label="Read" icon="pi pi-eye" style="margin-right: .25em"></button>
+      </p-footer>
+    </p-card>
+  </div>
+</div>

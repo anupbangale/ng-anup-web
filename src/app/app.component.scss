@@ -1,0 +1,11 @@
+.left-container {
+  height: calc(100vh - 140px);
+  width: 20%;
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+}
+.right-container {
+  height: calc(100vh - 140px);
+   width: 80%;
+  overflow-y: scroll;
+}

@@ -1,0 +1,19 @@
+<div class="ui-g-12 my-header">
+  <p class="ui-g-6">My Header</p>
+  <button type="text" pButton label="Select Theme" (click)="op1.toggle($event)"></button>
+</div>
+<p-overlayPanel #op1>
+  <div class="ui-g-12 ui-lg-12 ui-md-12 display-inline-flex">
+    <div class="switch-square blue" (click)="onClickThemeHandler('blue')"> </div>
+    <div class="switch-square green" (click)="onClickThemeHandler('green')"></div>
+    <div class="switch-square yellow" (click)="onClickThemeHandler('yellow')"></div>
+    <div class="switch-square pink" (click)="onClickThemeHandler('pink')"></div>
+    <div class="switch-square purple" (click)="onClickThemeHandler('purple')"></div>
+  </div>
+  <hr class="ui-g-12 ui-lg-12 ui-md-12 m-0">
+  <div class="ui-g-12 ui-lg-12 ui-md-12 display-inline-flex">
+    <p-checkbox [(ngModel)]="checked" [formControl]="darkTheme" binary="true"></p-checkbox>
+    <span class="p-l-10"></span>
+    Dark Mode
+  </div>
+</p-overlayPanel>

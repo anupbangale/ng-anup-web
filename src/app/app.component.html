@@ -1,0 +1,20 @@
+<div class="ui-g-12 ui-md-12 ui-lg-12">
+  <app-header></app-header>
+</div>
+<div class="ui-g-12 ui-md-12 ui-lg-12 p-t-0 display-inline-flex custom-scrollbars">
+  <div class="left-container">
+    <app-vertical-navbar></app-vertical-navbar>
+  </div>
+  <div #rightContainer class="right-container p-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="ui-g-12 ui-md-12 ui-lg-12">
+  <app-footer></app-footer>
+</div>
+<!-- <p-button *ngIf="isShow" pTooltip="Scroll to Top" class="scroll-top-button" icon="pi pi-angle-up" (onClick)="gotoTop()">
+</p-button> -->
+
+<p-button [hidden]='!isShow' pTooltip="Scroll to Top" tooltipPosition="top"  class="scroll-top-button" icon="pi pi-angle-up"
+  (onClick)="scrollTop()">
+</p-button>

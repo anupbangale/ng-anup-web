@@ -1,0 +1,43 @@
+.header {
+  // background-color: var(--pri)
+}
+.my-header {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  p {
+    text-align: left;
+    margin: 0;
+  }
+  .ui-button {
+    float: right;
+  }
+}
+.switch-square {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 4px;
+  .switch-square :focus {
+    outline-color: red;
+    outline-style: solid;
+    outline-width: 2px;
+  }
+}
+.blue {
+  background-color: #3d9dec;
+}
+.green {
+  background-color: #84bf69;
+}
+.yellow {
+  background-color: #e0973c;
+}
+.pink {
+  background-color: #b54e78;
+}
+.purple {
+  background-color: #75608a;
+}

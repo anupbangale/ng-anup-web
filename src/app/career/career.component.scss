@@ -1,0 +1,34 @@
+.cliptext{
+  // width: 20vw;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+.text-elipsis {
+  width: calc(100vw - 815px);
+  max-width: 45vw;
+  font-weight: bold;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+
+.overflow {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow:hover {
+  overflow: visible;
+}
+
+.overflow:hover span {
+  position: relative;
+  background-color: white;
+
+  box-shadow: 0 0 4px 0 black;
+  border-radius: 1px;
+}
