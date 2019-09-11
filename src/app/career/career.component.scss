@@ -4,9 +4,10 @@
   overflow: hidden !important;
   white-space: nowrap !important;
 }
+
 .text-elipsis {
-  width: calc(100vw - 815px);
-  max-width: 45vw;
+  // width: calc(100vw - 815px);
+  // max-width: 45vw;
   font-weight: bold;
   text-overflow: ellipsis !important;
   overflow: hidden !important;
