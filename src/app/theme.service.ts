@@ -1,4 +1,4 @@
-import { Injectable, HostListener } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 export const darkTheme = {
   'background-color': '#1f2935',
@@ -44,13 +44,11 @@ export const purpleTheme = {
   'button-color': '#867993',
 };
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
-  windowScrolled: boolean;
+
   constructor() { }
 
   toggleDark() {

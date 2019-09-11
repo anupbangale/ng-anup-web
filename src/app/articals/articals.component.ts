@@ -15,9 +15,7 @@ export class ArticalsComponent implements OnInit {
   ngOnInit() {
     this.articalsList = [
       // tslint:disable-next-line: max-line-length
-      { title: 'Title 1',
-      writer: 'writer 1',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae     numquam deserunt      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!' },
+      { title: 'Title 1', writer: 'writer 1', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae     numquam deserunt      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!' },
       { title: 'Title 1', writer: 'writer 1', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae     numquam deserunt      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!' },
       { title: 'Title 1', writer: 'writer 1', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae     numquam deserunt      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!' },
       { title: 'Title 1', writer: 'writer 1', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae     numquam deserunt      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!' },
