@@ -22,6 +22,7 @@ import { VerticalNavbarComponent } from './vertical-navbar/vertical-navbar.compo
 import { ArticalsComponent } from './articals/articals.component';
 import { CareerComponent } from './career/career.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { EllipsifyMeDirective } from './ellipsify-me.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { ContactusComponent } from './contactus/contactus.component';
     ArticalsComponent,
     CareerComponent,
     ContactusComponent,
+    EllipsifyMeDirective,
   ],
   imports: [
     BrowserModule,
