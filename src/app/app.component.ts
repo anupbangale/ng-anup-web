@@ -13,23 +13,23 @@ export class AppComponent implements OnInit, AfterViewInit {
   topPosToStartShowing = 100;
 
   @ViewChild('rightContainer', { static: false }) rightContainer;
+  domElement: any;
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    const ele = this.rightContainer.nativeElement;
-    this.renderer.listen(ele, 'scroll', () => {
-      const scrollPosition = ele.scrollTop || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.domElement = this.rightContainer.nativeElement;
+    this.renderer.listen(this.domElement, 'scroll', () => {
+      const scrollPosition = this.domElement.scrollTop || document.documentElement.scrollTop || document.body.scrollTop || 0;
       (scrollPosition >= this.topPosToStartShowing) ? this.isShow = true : this.isShow = false;
     });
   }
 
   scrollTop() {
-    const ele = this.rightContainer.nativeElement;
     // ele.scrollTo(0, 0);
-    ele.scroll({
+    this.domElement.scroll({
       top: 0,
       left: 0,
       behavior: 'smooth'
