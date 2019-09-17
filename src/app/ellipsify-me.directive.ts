@@ -1,11 +1,11 @@
-import { Directive, HostListener, ElementRef, AfterViewInit } from '@angular/core';
+import { Directive, HostListener, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appEllipsifyMe]'
 })
 export class EllipsifyMeDirective implements AfterViewInit {
   domElement: any;
-  constructor(private elementRef: ElementRef) {
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {
     this.domElement = this.elementRef.nativeElement; // to get DOM element and store it in global variable
     // setting compulsory required styles to the DOM element
     const elipsifyme = {
@@ -14,8 +14,11 @@ export class EllipsifyMeDirective implements AfterViewInit {
       'color': 'red',
       'white-space': 'nowrap',
     };
-    Object.keys(elipsifyme).forEach(style => {
-      this.domElement.style.setProperty(`${style}`, elipsifyme[style]);
+    Object.keys(elipsifyme).forEach(newStyle => {
+      // this.domElement.style.setProperty(`${newStyle}`, elipsifyme[newStyle]);
+      this.renderer.setStyle(
+        this.domElement, `${newStyle}`, elipsifyme[newStyle]
+      );
     });
   }
 
