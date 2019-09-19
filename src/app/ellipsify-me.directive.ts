@@ -24,9 +24,10 @@ export class EllipsifyMeDirective implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // to check and add title attribute on the element at the time when application renders first time.
-    this.domElement.scroll({
-      top: 2, behavior: 'smooth'
-    });
+    // this.domElement.scroll({
+    //   top: 2, behavior: 'smooth'
+    // });
+    this.renderer.setProperty(this.domElement, 'scrollTop', 2);
     this.isTitleAttribute();
   }
 
@@ -34,9 +35,13 @@ export class EllipsifyMeDirective implements AfterViewInit {
   isTitleAttribute() {
     // to add or remove title attribute on the element when it is changing width.
     console.log('onWidthChange');
+    // (this.domElement.offsetWidth < this.domElement.scrollWidth) ?
+    //   this.domElement.setAttribute("title", this.domElement.textContent) :
+    //   this.domElement.removeAttribute("title");
+
     (this.domElement.offsetWidth < this.domElement.scrollWidth) ?
-      this.domElement.setAttribute("title", this.domElement.textContent) :
-      this.domElement.removeAttribute("title");
+      this.renderer.setAttribute(this.domElement, 'title', this.domElement.textContent) :
+      this.renderer.removeAttribute(this.domElement, 'title');
   }
 
 }
