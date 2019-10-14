@@ -16,9 +16,7 @@ export class EllipsifyMeDirective implements AfterViewInit {
     };
     Object.keys(elipsifyme).forEach(newStyle => {
       // this.domElement.style.setProperty(`${newStyle}`, elipsifyme[newStyle]);
-      this.renderer.setStyle(
-        this.domElement, `${newStyle}`, elipsifyme[newStyle]
-      );
+      this.renderer.setStyle(this.domElement, `${newStyle}`, elipsifyme[newStyle]);
     });
   }
 
@@ -28,11 +26,11 @@ export class EllipsifyMeDirective implements AfterViewInit {
     //   top: 2, behavior: 'smooth'
     // });
     this.renderer.setProperty(this.domElement, 'scrollTop', 2);
-    this.isTitleAttribute();
+    this.setToolTip();
   }
 
   @HostListener("window:resize", ["$event.target"])
-  isTitleAttribute() {
+  setToolTip() {
     // to add or remove title attribute on the element when it is changing width.
     console.log('onWidthChange');
     // (this.domElement.offsetWidth < this.domElement.scrollWidth) ?
