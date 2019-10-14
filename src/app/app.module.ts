@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarModule } from 'primeng/sidebar';
 import { CardModule } from 'primeng/card';
 import { TooltipModule } from 'primeng/tooltip';
+import { InputTextModule } from 'primeng/inputtext';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,6 +51,7 @@ import { EllipsifyMeDirective } from './ellipsify-me.directive';
     SidebarModule,
     CardModule,
     TooltipModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent],
